@@ -137,3 +137,20 @@ p,li{font-size:.95rem;color:#3b3b3b}
 .slot.poster{height:var(--h,56vh);width:auto;max-width:100%;max-height:none;aspect-ratio:var(--ratio,4/5);justify-self:center}
 .slot.fixed img,.slot.poster img{object-fit:contain}
 .slot.fixed,.slot.poster{background:var(--paper)}
+
+/* Hàng standee */
+.standees{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(8px,1.6vw,20px);align-items:end}
+.standee{text-align:center}
+.standee .cap{margin-top:6px;font-size:.82rem;font-weight:700;color:var(--matcha)}
+@media(max-width:700px){.standees{grid-template-columns:repeat(3,1fr)}}
+
+/* Không cắt ảnh: bỏ zoom khi rê chuột, bo góc nhỏ, ảnh chưa rõ tỉ lệ thì tự co theo ảnh */
+.slot{border-radius:6px}
+.slot:hover img{transform:none}
+.slot.auto{aspect-ratio:auto;max-height:none;background:var(--paper)}
+.slot.auto img{height:auto;max-height:52vh;object-fit:contain}
+.slot.auto.is-empty{min-height:240px}
+
+/* Ảnh mockup bên trái, nội dung bên phải */
+.split{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,3vw,40px);align-items:center}
+@media(max-width:700px){.split{grid-template-columns:1fr}.split .slot.poster{--h:56vh}}
