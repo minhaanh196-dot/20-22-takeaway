@@ -132,8 +132,8 @@ p,li{font-size:.95rem;color:#3b3b3b}
 @media print{body{overflow:visible}.top,.nav,.progress,.bg,.toast{display:none}
   #deck{position:static}.slide{position:static;visibility:visible;opacity:1;transform:none;page-break-after:always}.slide [data-anim]{opacity:1}}
 
-/* Ảnh poster, post, story, brochure: hiện đủ khung hình, không cắt */
+/* Mỗi khung ảnh theo đúng tỉ lệ ấn phẩm (đặt bằng --ratio trong index.html) */
+.slot.fixed,.slot.tall{height:clamp(140px,29vh,300px);width:auto;max-width:100%;max-height:none;aspect-ratio:var(--ratio,4/5);margin:0 auto 10px}
+.slot.poster{height:var(--h,56vh);width:auto;max-width:100%;max-height:none;aspect-ratio:var(--ratio,4/5);justify-self:center}
 .slot.fixed img,.slot.poster img{object-fit:contain}
 .slot.fixed,.slot.poster{background:var(--paper)}
-.slot.poster{max-height:56vh;width:auto;height:56vh;aspect-ratio:4/5;justify-self:center}
-   html{font-size:118%}
