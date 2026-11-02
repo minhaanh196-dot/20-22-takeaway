@@ -136,3 +136,4 @@ p,li{font-size:.95rem;color:#3b3b3b}
 .slot.fixed img,.slot.poster img{object-fit:contain}
 .slot.fixed,.slot.poster{background:var(--paper)}
 .slot.poster{max-height:56vh;width:auto;height:56vh;aspect-ratio:4/5;justify-self:center}
+   html{font-size:118%}
